@@ -5,7 +5,7 @@ class Image:
 
     def parse(self, image_child):
         self.image_file = image_child.attrib['file']
-        for item in self.image_file:
+        for item in image_child:
             self.boxes.append(Box().parse(item))
 
         return self
