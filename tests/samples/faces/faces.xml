@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>imglab dataset</name>
+<comment>Created by imglab tool.</comment>
+<images>
+  <image file='image.jpg'>
+    <box top='106' left='351' width='203' height='259'>
+      <part name='left_eye' x='421' y='266'/>
+      <part name='right_eye' x='489' y='269'/>
+    </box>
+    <box top='111' left='129' width='260' height='332'>
+      <part name='left_eye' x='226' y='329'/>
+      <part name='right_eye' x='305' y='333'/>
+    </box>
+    <box top='184' left='11' width='184' height='239'>
+      <part name='left_eye' x='72' y='320'/>
+      <part name='right_eye' x='132' y='320'/>
+    </box>
+    <box top='67' left='546' width='223' height='248'>
+      <part name='left_eye' x='619' y='213'/>
+      <part name='right_eye' x='681' y='203'/>
+    </box>
+  </image>
+</images>
+</dataset>

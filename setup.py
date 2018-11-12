@@ -11,4 +11,6 @@ setup(
     license='MIT',
     zip_safe=False,
     keywords=['dlib', 'image processing', 'opencv', 'imglab'],
+    setup_requires=["pytest-runner"],
+    tests_require=["pytest"],
 )
