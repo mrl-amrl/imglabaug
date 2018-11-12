@@ -11,4 +11,5 @@ setup(
     license='MIT',
     zip_safe=False,
     keywords=['dlib', 'image processing', 'opencv', 'imglab'],
+    scripts=['bin/imglabaug'],
 )
