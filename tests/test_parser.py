@@ -17,8 +17,6 @@ class ParseXMLFileTest(unittest.TestCase):
         unittest.TestCase.__init__(self, *args, **kwargs)
 
     def test_parser(self):
-        print()
-
         samples = os.path.join("tests", "samples")
         faces = os.path.join(samples, "faces")
         result = parse_xml_file(os.path.join(faces, "faces.xml"))
