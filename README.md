@@ -6,7 +6,7 @@
 
 ### Installation
 
-Provided you already have NumPy and OpenCV already installed, the imglabaug package is completely pip-installable:
+Provided you already have `imutils`, `opencv` already installed, the `imglabaug` package is completely pip-installable:
 
 ```
 $ pip install imglabaug

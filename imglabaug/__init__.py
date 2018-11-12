@@ -4,3 +4,4 @@
 __version__ = "0.0.1"
 
 from .reader import parse_xml_file
+from .imglabaug import Augmentation

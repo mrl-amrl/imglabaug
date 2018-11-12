@@ -1,5 +1,7 @@
 #!/bin/bash
 
-rm -r .eggs
-rm -r .pytest_cache
-rm -r *.egg-info
+rm -rf .eggs
+rm -rf .pytest_cache
+sudo rm -rf *.egg-info
+sudo rm -rf build
+sudo rm -rf dist

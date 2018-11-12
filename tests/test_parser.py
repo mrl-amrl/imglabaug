@@ -1,7 +1,3 @@
-"""
-Test cases for data acquisition functions.
-"""
-
 import os
 import unittest
 

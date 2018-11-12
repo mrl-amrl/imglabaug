@@ -1,3 +1,36 @@
+from xml.dom.minidom import parseString
+
+
+class XMLFile:
+    def __init__(self, name="", comment=""):
+        self.name = name
+        self.comment = comment
+        self.images = []
+
+    def append_image(self, image):
+        self.images.append(image)
+
+    def __str__(self):
+        output = """<?xml version='1.0' encoding='ISO-8859-1'?>
+                <dataset>
+                <name>{name}</name>
+                <comment>{comment}</comment>
+                <images>
+                """.format(name=self.name, comment=self.comment)
+
+        for image in self.images:
+            output += image.__str__()
+
+        output += "</images>"
+        output += "</dataset>"
+        return parseString(output).toprettyxml()
+
+    def save(self, output_file):
+        output = self.__str__()
+        with open(output_file, 'w') as output_stream:
+            output_stream.write(output)
+
+
 class Image:
     def __init__(self):
         self.image_file = ""
@@ -9,6 +42,19 @@ class Image:
             self.boxes.append(Box().parse(item))
 
         return self
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __str__(self):
+        output = "<image file='{}'>".format(self.image_file)
+
+        for box in self.boxes:
+            output += box.__str__()
+
+        output += "</image>"
+
+        return output
 
 
 class Part:
@@ -23,6 +69,12 @@ class Part:
         self.y = int(item_child.attrib['y'])
 
         return self
+
+    def __str__(self):
+        return "<part name='{name}' x='{x}' y='{y}'/>".format(name=self.name, x=self.x, y=self.y)
+
+    def __repr__(self):
+        return self.__str__()
 
 
 class Box:
@@ -48,3 +100,19 @@ class Box:
             self.parts.append(Part().parse(item))
 
         return self
+
+    def __str__(self):
+        output = "<box top='{top}' left='{left}' width='{width}' height='{height}'>".format(top=self.top,
+                                                                                            left=self.left,
+                                                                                            width=self.width,
+                                                                                            height=self.height)
+
+        for part in self.parts:
+            output += part.__str__()
+
+        output += "</box>"
+
+        return output
+
+    def __repr__(self):
+        return self.__str__()
