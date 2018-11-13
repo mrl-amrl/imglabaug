@@ -24,7 +24,7 @@ class AugmentationTest(unittest.TestCase):
             shutil.rmtree(tmp_directory)
 
         augmentation = Augmentation(
-            output_directory=tmp_directory,
+            output_directory=tmp_directory,            
             max_blur_size=9,
             min_blur_size=1,            
             min_move_offset_x=-10,

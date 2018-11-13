@@ -14,8 +14,25 @@ $ pip install imglabaug
 
 ### Examples
 
-...
+```python
+from imglabaug import Augmentation
 
+augmentation = Augmentation(
+            output_directory='somewhere !',
+            max_blur_size=9,
+            min_blur_size=1,            
+            min_move_offset_x=-10,
+            max_move_offset_x=10,
+            min_move_offset_y=-10,
+            max_move_offset_y=10,
+            min_rotation_angle=-10,
+            max_rotation_angle=10,
+            iterations_length=20,
+        )
+
+augmentation.generate('xml file ...')
+augmentation.save()
+```
 
 ---
 
