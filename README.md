@@ -44,4 +44,4 @@ $ python2.7 -m nose -v --nocapture
 ---
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![Made in MRL](https://img.shields.io/badge/made%20in-Mechatronic%20Research%20Labratories-red.svg)](https://www.qiau.ac.ir/)
+[![Made in MRL](https://img.shields.io/badge/Made%20in-Mechatronic%20Research%20Labratories-red.svg)](https://www.qiau.ac.ir/)
