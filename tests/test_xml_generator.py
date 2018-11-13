@@ -16,11 +16,10 @@ class XMLFileTest(unittest.TestCase):
 
     def test_xml_generator(self):
         path = tempfile.mktemp()
-        os.mkdir(path, 0777)
+        output_file = os.path.join(path, "output.xml")
+        os.mkdir(path)
 
         try:
-            output_file = os.path.join(path, "output.xml")
-
             xml_file = XMLFile(name="test from generator", comment="hello world !")
 
             image = Image()
@@ -34,9 +33,9 @@ class XMLFileTest(unittest.TestCase):
             image.boxes.append(box)
 
             xml_file.append_image(image)
-            print xml_file
             xml_file.save(output_file)
         finally:
+            self.assertTrue(os.path.exists(output_file))
             shutil.rmtree(path)
 
 

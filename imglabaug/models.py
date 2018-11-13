@@ -19,21 +19,20 @@ class XMLFile:
                 """.format(name=self.name, comment=self.comment)
 
         for image in self.images:
-            output += image.__str__()
+            output += image.__repr__()
 
         output += "</images>"
         output += "</dataset>"
         return parseString(output).toprettyxml()
 
     def save(self, output_file):
-        output = self.__str__()
         with open(output_file, 'w') as output_stream:
-            output_stream.write(output)
+            output_stream.write(self.__str__())
 
 
 class Image:
-    def __init__(self):
-        self.image_file = ""
+    def __init__(self, image_file=""):
+        self.image_file = image_file
         self.boxes = []
 
     def parse(self, image_child):
@@ -50,7 +49,7 @@ class Image:
         output = "<image file='{}'>".format(self.image_file)
 
         for box in self.boxes:
-            output += box.__str__()
+            output += box.__repr__()
 
         output += "</image>"
 
@@ -108,7 +107,7 @@ class Box:
                                                                                             height=self.height)
 
         for part in self.parts:
-            output += part.__str__()
+            output += part.__repr__()
 
         output += "</box>"
 
