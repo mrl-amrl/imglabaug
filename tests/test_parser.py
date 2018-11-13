@@ -16,7 +16,7 @@ class ParseXMLFileTest(unittest.TestCase):
         samples = os.path.join("tests", "samples")
         faces = os.path.join(samples, "faces")
         result = parse_xml_file(os.path.join(faces, "faces.xml"))
-        self.assertTrue(len(result) == 1)
+        self.assertTrue(len(result) == 2)
         self.assertTrue(len(result[0].boxes) == 4)
         self.assertTrue(len(result[0].boxes[0].parts) == 2)
 

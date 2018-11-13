@@ -19,8 +19,9 @@ class AugmentationTest(unittest.TestCase):
         faces = os.path.join(samples, "faces")
 
         # tmp_directory = tempfile.mktemp()
-        tmp_directory = "/tmp/tmpmsAJU7"
-        shutil.rmtree(tmp_directory)
+        tmp_directory = "/tmp/test_imglabaug"
+        if os.path.exists(tmp_directory):
+            shutil.rmtree(tmp_directory)
 
         augmentation = Augmentation(
             output_directory=tmp_directory,

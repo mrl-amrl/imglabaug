@@ -4,22 +4,40 @@
 <name>imglab dataset</name>
 <comment>Created by imglab tool.</comment>
 <images>
-  <image file='image.jpg'>
-    <box top='106' left='351' width='203' height='259'>
-      <part name='left_eye' x='417' y='264'/>
-      <part name='right_eye' x='482' y='266'/>
+  <image file='image_1.jpg'>
+    <box top='206' left='12' width='177' height='213'>
+      <part name='left_eye' x='73' y='321'/>
+      <part name='right_eye' x='133' y='324'/>
     </box>
-    <box top='111' left='129' width='260' height='332'>
-      <part name='left_eye' x='226' y='329'/>
-      <part name='right_eye' x='305' y='333'/>
+    <box top='132' left='148' width='205' height='297'>
+      <part name='left_eye' x='226' y='323'/>
+      <part name='right_eye' x='298' y='331'/>
     </box>
-    <box top='184' left='11' width='184' height='239'>
-      <part name='left_eye' x='72' y='320'/>
-      <part name='right_eye' x='132' y='320'/>
+    <box top='118' left='359' width='196' height='262'>
+      <part name='left_eye' x='416' y='264'/>
+      <part name='right_eye' x='482' y='267'/>
     </box>
-    <box top='67' left='546' width='223' height='248'>
-      <part name='left_eye' x='628' y='213'/>
-      <part name='right_eye' x='681' y='203'/>
+    <box top='75' left='558' width='206' height='242'>
+      <part name='left_eye' x='628' y='215'/>
+      <part name='right_eye' x='684' y='205'/>
+    </box>
+  </image>
+  <image file='image_2.jpg'>
+    <box top='27' left='283' width='143' height='182'>
+      <part name='left_eye' x='334' y='109'/>
+      <part name='right_eye' x='374' y='104'/>
+    </box>
+    <box top='114' left='522' width='134' height='158'>
+      <part name='left_eye' x='585' y='191'/>
+      <part name='right_eye' x='614' y='186'/>
+    </box>
+    <box top='198' left='716' width='115' height='133'>
+      <part name='left_eye' x='765' y='269'/>
+      <part name='right_eye' x='791' y='268'/>
+    </box>
+    <box top='226' left='904' width='112' height='132'>
+      <part name='left_eye' x='941' y='292'/>
+      <part name='right_eye' x='968' y='289'/>
     </box>
   </image>
 </images>
