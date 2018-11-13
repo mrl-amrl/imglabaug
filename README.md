@@ -34,6 +34,13 @@ augmentation.generate('xml file ...')
 augmentation.save()
 ```
 
+### Tests
+
+```bash
+$ sudo pip install nose
+$ python2.7 -m nose -v --nocapture
+```
+
 ---
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
